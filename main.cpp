@@ -80,7 +80,7 @@ void country(){
         if (answer=='Y'){
             std::cout<<"Is the character a male?";
             std::cin>>gender;
-            answer=std::toupper(gender);
+            answer=checkInput(input_string);
             answer=='Y'? std::cout<<"Aha! The character you picked is Baizhu."<<'\n': std::cout<<"Aha! The character you picked is Yaoyao."<<'\n';
         }
         else if (answer=='N'){
@@ -210,7 +210,10 @@ void weapon(){
                 std::cout<<"Aha! The character you picked is Kaveh."<<'\n';
                 found=1;
             }
-    std::cout<<"Wait, you said no to everything...Try again."<<'\n';
+    else if (answer=='N'){
+        std::cout<<"Wait, you said no to everything...Try again."<<'\n';
+    }
+    
 }
 }
 
